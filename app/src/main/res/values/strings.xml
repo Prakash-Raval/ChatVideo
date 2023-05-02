@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ChatVideo</string>
+    <string name="hello_nsign_up_to_get_started">Hello!\nSign up to get started.</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="already_have_an_account">Already have an account!</string>
+    <string name="hello_again_nwelcome_back">Hello again.\nWelcome back.</string>
+    <string name="you_don_t_have_an_account">You don\'t have an account!</string>
+</resources>

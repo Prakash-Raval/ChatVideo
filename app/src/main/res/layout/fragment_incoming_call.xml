@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_fragment_call" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtName"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginTop="164dp"
+            android:background="@drawable/bg_textview_rounded_background"
+            android:gravity="center"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:text="Image" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:text="Ibrahim Mushtaha" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnStartCall"
+            style="@style/focusInClick"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/bg_textview_rounded_background"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:elevation="4dp"
+            android:src="@drawable/ic_call"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnFinshCall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserName"
+            tools:text="email" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnFinshCall"
+            style="@style/focusInClick"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/bg_textview_rounded_background"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:elevation="4dp"
+            android:src="@drawable/ic_end_call"
+            app:layout_constraintBottom_toBottomOf="@id/btnStartCall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnStartCall"
+            app:layout_constraintTop_toTopOf="@id/btnStartCall"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

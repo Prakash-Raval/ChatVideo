@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "224956097312",
+    "project_id": "chatvideo-d8034",
+    "storage_bucket": "chatvideo-d8034.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224956097312:android:937aff0afb89a9141d6d45",
+        "android_client_info": {
+          "package_name": "com.example.chatvideo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224956097312-lue6t60p6ir2h89lhnkkjmurj231r4ke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADhinveSVB7xDZTHnX9TiDyJt_c5DYf3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224956097312-lue6t60p6ir2h89lhnkkjmurj231r4ke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

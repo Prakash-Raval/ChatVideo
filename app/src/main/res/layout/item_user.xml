@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.chatvideo.model.User" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/allCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2.5dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tvProfileImage"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:elevation="4dp"
+                android:src="@drawable/ic_profile_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/tvOnlineStatus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="44dp"
+                android:elevation="4dp"
+                android:src="@drawable/ic_online"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/tvProfileImage"
+                app:layout_constraintStart_toStartOf="@+id/tvProfileImage"
+                app:layout_constraintTop_toTopOf="@+id/tvProfileImage"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12sp"
+                android:text="@{user.name}"
+                android:textColor="@color/purple_700"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnCallAudio"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvProfileImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.051"
+                tools:text="username" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/btnCallVideo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_videocam" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/btnCallAudio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnCallVideo"
+                app:layout_constraintEnd_toStartOf="@+id/btnCallVideo"
+                app:layout_constraintTop_toTopOf="@+id/btnCallVideo"
+                app:srcCompat="@drawable/ic_call" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

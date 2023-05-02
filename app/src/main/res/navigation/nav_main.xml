@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/sigInFragment"
+        android:name="com.example.chatvideo.ui.fragment.auth.SigInFragment"
+        android:label="SigInFragment">
+        <action
+            android:id="@+id/action_sigInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_sigInFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.chatvideo.ui.fragment.auth.SignUpFragment"
+        android:label="SignUpFragment" />
+
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.chatvideo.ui.fragment.home.UserListFragment"
+        android:label="Chat">
+        <action
+            android:id="@+id/action_userListFragment_to_callFragment"
+            app:destination="@id/IncomingcallFragment" />
+        <action
+            android:id="@+id/action_userListFragment_to_outgoingInvitationFragment"
+            app:destination="@id/outgoingCallFragment"
+
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/IncomingcallFragment"
+        android:name="com.example.chatvideo.ui.fragment.call.IncomingCallFragment"
+        android:label="IncomingcallFragment" />
+    <fragment
+        android:id="@+id/outgoingCallFragment"
+        android:name="com.example.chatvideo.ui.fragment.call.OutgoingCallFragment"
+        android:label="outgoingCallFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.chatvideo.ui.fragment.auth.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_sigInFragment"
+            app:destination="@id/sigInFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@+id/nav_main"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_userListFragment"
+            app:destination="@id/userListFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_down"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:popUpTo="@+id/nav_main"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>
